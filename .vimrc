@@ -27,5 +27,9 @@
 :set smarttab
 :set bs=2
 
-:source buildHaml.vim
+if filereadable( '~/.vim/buildHaml.vim' )
+    source ~/.vim/buildHaml.vim
+else
+    source ~/vimfiles/buildHaml.vim
+endif
 :redraw
