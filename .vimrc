@@ -24,3 +24,4 @@
 :set backupdir=~/.vim/backup,~/vimfiles/backup
 :set directory=~/.vim/tmp,~/vimfiles/tmp
 :set smarttab
+:set bs=2
