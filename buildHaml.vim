@@ -9,7 +9,6 @@ function! BuildHaml()
     else
         let a:cmd = '!php ' . a:widgetsDir . '/convertHaml.php ' . @%
         echo a:cmd
-        let cmd=a:cmd
         :execute a:cmd
     endif
 endfunction
