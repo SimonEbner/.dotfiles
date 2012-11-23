@@ -21,6 +21,6 @@
 :set shiftwidth=4
 :set expandtab
 :set backup
-:set backupdir=~/.vim/backup
-:set directory=~/.vim/tmp
+:set backupdir=~/.vim/backup,~/vimfiles/backup
+:set directory=~/.vim/tmp,~/vimfiles/tmp
 :set smarttab
