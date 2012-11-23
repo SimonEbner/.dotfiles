@@ -1,6 +1,7 @@
 :call pathogen#infect()
 :call pathogen#runtime_append_all_bundles()
 :call pathogen#helptags()
+:filetype plugin indent on
 :set autoindent
 :set pastetoggle=<F10>
 :set showmatch
