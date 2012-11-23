@@ -1,3 +1,4 @@
+:syntax on
 :call pathogen#infect()
 :call pathogen#runtime_append_all_bundles()
 :call pathogen#helptags()
@@ -21,6 +22,7 @@
 :set shiftwidth=4
 :set expandtab
 :set backup
-:set backupdir=~/.vim/backup
-:set directory=~/.vim/tmp
+:set backupdir=~/.vim/backup,~/vimfiles/backup
+:set directory=~/.vim/tmp,~/vimfiles/tmp
 :set smarttab
+:set bs=2
