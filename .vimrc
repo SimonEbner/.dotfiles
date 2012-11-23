@@ -26,3 +26,5 @@
 :set directory=~/.vim/tmp,~/vimfiles/tmp
 :set smarttab
 :set bs=2
+
+:source buildHaml.vim
