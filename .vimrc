@@ -28,3 +28,4 @@
 :set bs=2
 
 :source buildHaml.vim
+:redraw
