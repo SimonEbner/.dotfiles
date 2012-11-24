@@ -6,6 +6,8 @@
 :set autoindent
 :set pastetoggle=<F10>
 :set showmatch
+:set ignorecase
+:set smartcase
 :set matchtime=0
 :set hlsearch
 :set incsearch
