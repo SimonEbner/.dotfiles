@@ -35,3 +35,8 @@ else
     source ~/vimfiles/buildHaml.vim
 endif
 :redraw
+
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
