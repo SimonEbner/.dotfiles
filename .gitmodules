@@ -10,3 +10,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = git@github.com:pangloss/vim-javascript.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = git@github.com:kien/ctrlp.vim.git
