@@ -29,6 +29,8 @@
 :set smarttab
 :set bs=2
 
+:set nocindent
+
 :set encoding=utf-8
 :set fileencoding=utf-8
 
