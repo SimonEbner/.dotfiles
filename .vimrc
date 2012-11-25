@@ -29,6 +29,9 @@
 :set smarttab
 :set bs=2
 
+:set encoding=utf-8
+:set fileencoding=utf-8
+
 if filereadable( '~/.vim/buildHaml.vim' )
     source ~/.vim/buildHaml.vim
 else
