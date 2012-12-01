@@ -7,7 +7,7 @@ function! BuildHaml()
     elseif empty( a:widgetsDir )
         echo 'No fa-widgets'
     else
-        let a:cmd = '!php ' . a:widgetsDir . '/convertHaml.php ' . @%
+        let a:cmd = '!php ' . a:widgetsDir . '/build.php ' . @%
         echo a:cmd
         :execute a:cmd
     endif
