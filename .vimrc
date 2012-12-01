@@ -30,7 +30,8 @@
 :set bs=2
 
 :set nocindent
-:set linebreak=...
+:set linebreak
+:set showbreak=...
 
 :set encoding=utf-8
 :set fileencoding=utf-8
