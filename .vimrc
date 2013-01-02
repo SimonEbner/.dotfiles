@@ -37,7 +37,7 @@
 :set fileencoding=utf-8
 :set autochdir
 
-if filereadable( '~/.vim/buildHaml.vim' )
+if filereadable( expand( '~/.vim/buildHaml.vim' ))
     source ~/.vim/buildHaml.vim
 else
     source ~/vimfiles/buildHaml.vim
