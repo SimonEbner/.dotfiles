@@ -1,13 +1,13 @@
 function! BuildHaml()
     let a:filename=expand( '%:t' )
     let a:path=expand( '%:p:h' )
-    let a:widgetsDir = matchstr( a:path, '.*fa-widgets' )
+    let a:widgetsDir = matchstr( a:path, '.*fitnessAvenue' )
     if empty( matchstr( a:filename, '\.haml' ))
         echo 'No Haml file'
     elseif empty( a:widgetsDir )
         echo 'No fa-widgets'
     else
-        let a:cmd = '!php ' . a:widgetsDir . '/build.php ' . @%
+        let a:cmd = '!php ' . a:widgetsDir . '/../build.php ' . expand( '%:p' )
         echo a:cmd
         :execute a:cmd
     endif
