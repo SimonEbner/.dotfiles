@@ -20,6 +20,7 @@
 :inoremap <C-s> <C-o>:w<CR>
 :inoremap <C-z> <C-o><C-z>
 :nnoremap x "_x
+:nnoremap dx "_dd
 
 :set tabstop=4
 :set shiftwidth=4
