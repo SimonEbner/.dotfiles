@@ -45,6 +45,9 @@ else
 endif
 :redraw
 
+:set modeline
+:set ls=2
+
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
