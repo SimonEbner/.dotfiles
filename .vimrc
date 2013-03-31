@@ -49,6 +49,8 @@ endif
 :set ls=2
 :set colorcolumn=80
 
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
