@@ -51,6 +51,13 @@ endif
 
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
+
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
