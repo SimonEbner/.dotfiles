@@ -47,6 +47,7 @@ endif
 
 :set modeline
 :set ls=2
+:set colorcolumn=80
 
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
