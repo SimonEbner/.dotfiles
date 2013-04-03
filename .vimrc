@@ -20,6 +20,7 @@
 :inoremap <C-s> <C-o>:w<CR>
 :inoremap <C-z> <C-o><C-z>
 :nnoremap x "_x
+:nnoremap dx "_dd
 
 :set tabstop=4
 :set shiftwidth=4
@@ -47,7 +48,13 @@ endif
 
 :set modeline
 :set ls=2
-:set colorcolumn=80
+if exists('+colorcolumn')
+    set colorcolumn=80
+else
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%81v.\+/
+endif
+
 
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
