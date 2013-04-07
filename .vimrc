@@ -46,6 +46,8 @@ endif
 :redraw
 
 :set modeline
+:set statusline+=%F
+:set lastline=2
 :set ls=2
 :set colorcolumn=80
 
