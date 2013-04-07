@@ -48,7 +48,7 @@ endif
 
 :set modeline
 :set statusline+=%F
-:set lastline=2
+:set laststatus=2
 :set ls=2
 if exists('+colorcolumn')
     set colorcolumn=80
