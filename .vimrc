@@ -73,4 +73,26 @@ let g:ctrlp_prompt_mappings = {
 " powerline
 set nocompatible
 set t_Co=256
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+hi User1 guifg=#eea040 guibg=#222222
+hi User2 guifg=#dd3333 guibg=#222222
+hi User3 guifg=#ff66ff guibg=#222222
+hi User4 guifg=#a0ee40 guibg=#222222
+hi User5 guifg=#eeee40 guibg=#222222
+
+set statusline=
+set statusline +=%1*\ %n\ %*            "buffer number
+set statusline +=%1*\ %P\ %*                        " percentage of file
+set statusline +=%1*%l%*             "current line
+set statusline +=%2*/%L%*               "total lines
+set statusline +=%4*\ %<%F%*            "full path
+set statusline +=%2*%m%*                "modified flag
+set statusline +=%1*%=%*             "current line
+set statusline+=%h%m%r%w                     " flags
+set statusline +=%1*%4v\ %*             "virtual column number
+set statusline +=%1*\[%{strlen(&ft)?&ft:'none'},  " filetype
+set statusline +=%{strlen(&fenc)?&fenc:&enc}, " encoding
+set statusline +=%{&fileformat}]              " file format
+set statusline+=%=                           " right align
+
