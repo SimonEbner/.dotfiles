@@ -91,7 +91,6 @@ set statusline +=%2*/%L%*               "total lines
 set statusline +=%4*\ %<%F%*            "full path
 set statusline +=%2*%m%*                "modified flag
 set statusline +=%1*%=%*             "current line
-set statusline+=%h%m%r%w                     " flags
 set statusline +=%1*%4v\ %*             "virtual column number
 set statusline +=%1*\[%{strlen(&ft)?&ft:'none'},  " filetype
 set statusline +=%{strlen(&fenc)?&fenc:&enc}, " encoding
