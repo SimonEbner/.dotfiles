@@ -69,3 +69,8 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
+
+" powerline
+set nocompatible
+set t_Co=256
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
