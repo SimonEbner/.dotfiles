@@ -100,3 +100,4 @@ set statusline +=%{strlen(&fenc)?&fenc:&enc}, " encoding
 set statusline +=%{&fileformat}]              " file format
 set statusline+=%=                           " right align
 
+colorscheme wombat256mod
