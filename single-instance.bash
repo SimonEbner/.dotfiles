@@ -9,6 +9,7 @@ echo $VIM_SINGLE
         $VIM_SINGLE --servername vim$$ $@
     else
         $VIM_SINGLE --servername vim$$ --remote-tab $1
+        $VIM_SINGLE --servername vim$$ --remote-send ':tabp<CR>:tabn<CR>'
         fg
     fi
 }
