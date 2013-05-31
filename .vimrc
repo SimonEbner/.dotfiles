@@ -58,8 +58,11 @@ else
 endif
 
 
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+au BufNewFile,BufReadPost *.coffee setl sw=2 sts=2 et
+au BufNewFile,BufReadPost *.eco setl sw=2 sts=2 et
 
+"
+" Camel Case Movment
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
@@ -97,4 +100,8 @@ set statusline +=%{strlen(&fenc)?&fenc:&enc}, " encoding
 set statusline +=%{&fileformat}]              " file format
 set statusline+=%=                           " right align
 
-colorscheme wombat256mod
+if has( 'win32' )
+    colorscheme default
+else
+    colorscheme wombat256mod
+endif
