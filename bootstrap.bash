@@ -23,7 +23,7 @@ link_files () {
         if [ -d $source ]; then
             ln -s $source/ $dest
         else
-            ln -s $source/ $dest
+            ln -s $source $dest
         fi
         printf "Installed $dest \n"
     done
