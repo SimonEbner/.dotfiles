@@ -15,10 +15,15 @@ link_files () {
 
     for source in `find ~/.dotfiles -name \*.symlink`; do
         dest="$HOME/.`basename \"${source%.*}\"`"
+        destBackup="$dest.backup"
 
         if [ -f $dest ] || [ -d $dest ] || [ -h $dest ]; then
+            if [ -f $destBackup ] || [ -d $destBackup ]; then
+                printf "Backup exists already. Remove first"
+                exit 1
+            fi
             printf "Backup of existing file \n"
-            mv $dest $dest\.backup
+            mv $dest $destBackup
         fi
         if [ -d $source ]; then
             ln -s $source/ $dest
