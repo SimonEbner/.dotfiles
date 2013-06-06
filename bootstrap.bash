@@ -8,7 +8,11 @@ link_files () {
         echo "You need to clone this repo into $HOME/.dotfiles"
         exit 1
     fi
-    for source in `find $DIR -name \*.symlink`; do
+
+    git submodule init; git submodule update;
+    git submodule foreach "git checkout master; git pull; ./init.bash"
+
+    for source in `find ~/.dotfiles -name \*.symlink`; do
         dest="$HOME/.`basename \"${source%.*}\"`"
 
         if [ -f $dest ] || [ -d $dest ]; then
