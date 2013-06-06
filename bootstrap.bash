@@ -4,6 +4,10 @@
 
 link_files () {
     DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+    if [ $DIR != "$HOME/.dotfiles" ]; then
+        echo "You need to clone this repo into $HOME/.dotfiles"
+        exit 1
+    fi
     for source in `find $DIR -name \*.symlink`; do
         dest="$HOME/.`basename \"${source%.*}\"`"
 
