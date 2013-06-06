@@ -19,7 +19,11 @@ link_files () {
             printf "Backup of existing file \n"
             mv $dest $dest\.backup
         fi
-        ln -s $source $dest
+        if [ -d $source ]; then
+            ln -s $source/ $dest
+        else
+            ln -s $source/ $dest
+        fi
         printf "Installed $dest \n"
     done
 }
