@@ -15,7 +15,7 @@ link_files () {
     for source in `find ~/.dotfiles -name \*.symlink`; do
         dest="$HOME/.`basename \"${source%.*}\"`"
 
-        if [ -f $dest ] || [ -d $dest ]; then
+        if [ -f $dest ] || [ -d $dest ] || [ -h $dest ]; then
             printf "Backup of existing file \n"
             mv $dest $dest\.backup
         fi
