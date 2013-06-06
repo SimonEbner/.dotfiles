@@ -1,0 +1,6 @@
+[user]
+	name = Simon Ebner
+[color]
+	ui = true
+[push]
+	default = simple
