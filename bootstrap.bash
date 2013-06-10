@@ -19,7 +19,7 @@ link_files () {
 
         if [ -f $dest ] || [ -d $dest ] || [ -h $dest ]; then
             if [ -f $destBackup ] || [ -d $destBackup ]; then
-                printf "Backup exists already. Remove first"
+                printf "Backup $destBackup exists already. Remove first\n"
                 exit 1
             fi
             printf "Backup of existing file \n"
