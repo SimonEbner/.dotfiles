@@ -6,16 +6,16 @@
 	url = git://git.wincent.com/command-t.git
 [submodule "bundle/javascript"]
 	path = bundle/javascript
-	url = git://git@github.com:pangloss/vim-javascript.git
+	url = git://github.com/pangloss/vim-javascript.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
-	url = git://git@github.com:kien/ctrlp.vim.git
+	url = git://github.com/kien/ctrlp.vim.git
 [submodule "bundle/rename"]
 	path = bundle/rename
-	url = git://git@github.com:danro/rename.vim.git
+	url = git://github.com/danro/rename.vim.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
-	url = git://git@github.com:scrooloose/nerdcommenter.git
+	url = git://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script
