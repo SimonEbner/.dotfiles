@@ -99,6 +99,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export PATH=/opt/TurboVNC/bin:$PATH
+export EDITOR="vim"
 #source /opt/ros/cturtle/setup.sh
 #source /home/webportal/git/care-o-bot/setup.sh
 
