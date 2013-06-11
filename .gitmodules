@@ -1,9 +1,9 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
-	url = git://git.wincent.com/command-t.git
+	url = https://git.wincent.com/command-t.git
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = git@github.com:pangloss/vim-javascript.git
@@ -21,4 +21,4 @@
 	url = https://github.com/kchmck/vim-coffee-script
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
-	url = git://github.com/bkad/CamelCaseMotion.git
+	url = https://github.com/bkad/CamelCaseMotion.git
