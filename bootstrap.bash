@@ -13,7 +13,7 @@ link_files () {
     git submodule init; git submodule update;
     git submodule foreach "git checkout master; git pull; ./init.bash"
 
-    for source in `find ~/.dotfiles -name \*.symlink`; do
+    for source in `find ~/.dotfiles -name \*.symlink | grep -v .git`; do
         dest="$HOME/.`basename \"${source%.*}\"`"
         destBackup="$dest.backup"
 
