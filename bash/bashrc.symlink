@@ -104,10 +104,7 @@ export EDITOR="vim"
 #source /home/webportal/git/care-o-bot/setup.sh
 
 
-source /opt/ros/electric/setup.bash
-export ROS_PACKAGE_PATH=~/ba/ros:~/git/care-o-bot:$ROS_PACKAGE_PATH
-export ROBOT=cob3-6
-export ROBOT_ENV=ipa-kitchen
 
 source ~/.dotfiles/vim.symlink/single-instance.bash
 source ~/.dotfiles/bash/aliases.bash
+source ~/.dotfiles/bash/ros.bash
