@@ -9,16 +9,19 @@
 	url = https@github.com:pangloss/vim-javascript.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
-	url = https@github.com:kien/ctrlp.vim.git
+	url = git://github.com/pangloss/vim-javascript.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
 [submodule "bundle/rename"]
 	path = bundle/rename
-	url = https@github.com:danro/rename.vim.git
+	url = git://github.com/danro/rename.vim.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
-	url = https@github.com:scrooloose/nerdcommenter.git
+	url = git://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
-	url = https://https.com/kchmck/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
-	url = https://github.com/bkad/CamelCaseMotion.git
+	url = git://github.com/bkad/CamelCaseMotion.git
