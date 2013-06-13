@@ -1,7 +1,7 @@
 #!/bin/zsh
 export VIM_SINGLE=`which vim`
 export SUPPORTS=`vim --version | grep "+clientserver"`
-if [ $SUPPPORTS ];then
+if [ "$SUPPORTS" != '' ];then
     alias vim="single-vim"
 fi
 
