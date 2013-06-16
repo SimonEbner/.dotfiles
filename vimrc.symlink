@@ -104,6 +104,8 @@ set statusline+=%=                           " right align
 
 " save as admin
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+command Wq :execute ':W' | :q
+command WQ :Wq
 
 if has( 'win32' )
     colorscheme default
