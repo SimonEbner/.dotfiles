@@ -102,6 +102,9 @@ set statusline +=%{strlen(&fenc)?&fenc:&enc}, " encoding
 set statusline +=%{&fileformat}]              " file format
 set statusline+=%=                           " right align
 
+" save as admin
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
 if has( 'win32' )
     colorscheme default
 else
