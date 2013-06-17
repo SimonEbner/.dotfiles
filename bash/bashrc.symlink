@@ -83,3 +83,4 @@ export EDITOR="vim"
 source ~/.dotfiles/vim.symlink/single-instance.bash
 source ~/.dotfiles/bash/aliases.bash
 source ~/.dotfiles/bash/ros.bash
+source ~/.dotfiles/bash/android.bash
