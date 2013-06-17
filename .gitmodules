@@ -1,15 +1,9 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = https://git.wincent.com/command-t.git
 [submodule "bundle/javascript"]
 	path = bundle/javascript
-	url = https@github.com:pangloss/vim-javascript.git
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = git://github.com/pangloss/vim-javascript.git
+	url = git://github.com:pangloss/vim-javascript.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
