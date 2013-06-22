@@ -85,3 +85,4 @@ source ~/.dotfiles/bash/aliases.bash
 source ~/.dotfiles/bash/ros.bash
 source ~/.dotfiles/bash/android.bash
 source ~/.dotfiles/bash/setupEnv.bash
+source ~/.dotfiles/bash/installJava7.bash
