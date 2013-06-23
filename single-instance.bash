@@ -6,12 +6,16 @@ if [ "$SUPPORTS" != '' ];then
 fi
 
 function single-vim(){
-echo $VIM_SINGLE
+    filename=$1
+    filenameWithoutDouble=`echo $filename | sed -rn "s/(.*):$/\1/p"`
+    if [ ! -f "$filename" ] && [ -f "$filenameWithoutDouble" ]; then
+        filename=$filenameWithoutDouble
+    fi
     pid=`ps ax | grep -v grep | grep vim$$` 
     if [ -z "$pid" ]; then
-        $VIM_SINGLE --servername vim$$ $@
+        $VIM_SINGLE --servername vim$$ $filename
     else
-        $VIM_SINGLE --servername vim$$ --remote-tab $1
+        $VIM_SINGLE --servername vim$$ --remote-tab $filename
         $VIM_SINGLE --servername vim$$ --remote-send ':tabp<CR>:tabn<CR>'
         fg
     fi
