@@ -22,4 +22,7 @@ function setupEnv(){
     assertInstalled git-core
     assertInstalled gitg
     assertInstalled gitk
+    assertInstalled htop
+    assertInstalled aptitude
+    assertInstalled unrar
 }
