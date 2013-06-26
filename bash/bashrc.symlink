@@ -86,3 +86,4 @@ source ~/.dotfiles/bash/ros.bash
 source ~/.dotfiles/bash/android.bash
 source ~/.dotfiles/bash/setupEnv.bash
 source ~/.dotfiles/bash/installJava7.bash
+source ~/.dotfiles/bash/createSite.bash
