@@ -28,4 +28,5 @@ function setupEnv(){
     assertInstalled ia32-libs
     assertInstalled filezilla
     assertInstalled nemo
+    assertInstalled xclip
 }

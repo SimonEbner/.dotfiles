@@ -18,3 +18,5 @@ alias l='ls -CF'
 
 alias trash='gvfs-trash'
 alias run='gvfs-open'
+
+alias copy='xclip -selection clipboard'
