@@ -79,7 +79,7 @@ export EDITOR="vim"
 #source /home/webportal/git/care-o-bot/setup.sh
 
 #set keyboard layout
-setxkbmap de
+type setxkbmap 1>/dev/null 2>&1 && setxkbmap de
 
 
 source ~/.dotfiles/vim.symlink/single-instance.bash
