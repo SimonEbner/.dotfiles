@@ -29,4 +29,5 @@ function setupEnv(){
     assertInstalled filezilla
     assertInstalled nemo
     assertInstalled xclip
+    assertInstalled exuberant-ctags
 }
