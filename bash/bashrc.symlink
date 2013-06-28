@@ -78,6 +78,8 @@ export EDITOR="vim"
 #source /opt/ros/cturtle/setup.sh
 #source /home/webportal/git/care-o-bot/setup.sh
 
+#set keyboard layout
+setxkbmap de
 
 
 source ~/.dotfiles/vim.symlink/single-instance.bash
