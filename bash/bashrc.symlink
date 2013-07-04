@@ -73,7 +73,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH=/opt/TurboVNC/bin:$PATH
 export EDITOR="vim"
 #source /opt/ros/cturtle/setup.sh
 #source /home/webportal/git/care-o-bot/setup.sh
@@ -82,6 +81,7 @@ export EDITOR="vim"
 type setxkbmap 1>/dev/null 2>&1 && setxkbmap de
 
 
+source ~/.dotfiles/bash/path.bash
 source ~/.dotfiles/vim.symlink/single-instance.bash
 source ~/.dotfiles/bash/aliases.bash
 source ~/.dotfiles/bash/ros.bash
