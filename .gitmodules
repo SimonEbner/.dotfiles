@@ -19,6 +19,3 @@
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = git://github.com/bkad/CamelCaseMotion.git
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = https://github.com/joeytwiddle/taglist.vim.git
