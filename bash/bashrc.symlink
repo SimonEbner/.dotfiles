@@ -90,3 +90,4 @@ source ~/.dotfiles/bash/setupEnv.bash
 source ~/.dotfiles/bash/installJava7.bash
 source ~/.dotfiles/bash/createSite.bash
 source ~/.dotfiles/bash/latest.bash
+source ~/.dotfiles/bash/installScss.bash
