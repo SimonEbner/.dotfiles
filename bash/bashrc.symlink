@@ -92,4 +92,4 @@ source ~/.dotfiles/bash/createSite.bash
 source ~/.dotfiles/bash/latest.bash
 source ~/.dotfiles/bash/git.bash
 
-export PS1='\[\e[33m\]\h\[\e[0m\]:\W\[\e[33m\]$(__git_ps1 "(%s)")\[\e[0m\] \u\$ '
+export PS1='`if [ $? = 0 ]; then echo "\[\033[01;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \[\033[01;30m\]\h\[\033[01;34m\] \w\[\033[33m\]$(__git_ps1 " %s") \[\033[01;30m\]>\[\033[00m\] '
