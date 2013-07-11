@@ -13,23 +13,27 @@ link_files () {
     git submodule init; git submodule update;
     git submodule foreach "git checkout master; git pull; ./init.bash"
 
-    for source in `find ~/.dotfiles -name \*.symlink | grep -v .git`; do
+    for source in `find ~/.dotfiles -name \*.symlink | grep -vE "\.git"`; do
         dest="$HOME/.`basename \"${source%.*}\"`"
         destBackup="$dest.backup"
 
+        if [ -h $dest ] && [ "`readlink -f $dest`" == "$source" ]; then
+            echo "Symlink already setup for $dest"
+            continue
+        fi
         if [ -f $dest ] || [ -d $dest ] || [ -h $dest ]; then
-            if [ -f $destBackup ] || [ -d $destBackup ]; then
+            if [ -h $destBackup ]; then
+                loc=`readlink -f $destBackup`
+                echo "Removing symlink $destBackup that pointed to $loc"
+                rm $destBackup;
+            elif [ -f $destBackup ] || [ -d $destBackup ]; then
                 printf "Backup $destBackup exists already. Remove first\n"
                 exit 1
             fi
             printf "Backup of existing file \n"
             mv $dest $destBackup
         fi
-        if [ -d $source ]; then
-            ln -s $source/ $dest
-        else
-            ln -s $source $dest
-        fi
+        ln -s $source $dest
         printf "Installed $dest \n"
     done
 }

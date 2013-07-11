@@ -30,4 +30,5 @@ function setupEnv(){
     assertInstalled nemo
     assertInstalled xclip
     assertInstalled exuberant-ctags
+    assertInstalled audacious
 }
