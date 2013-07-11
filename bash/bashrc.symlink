@@ -91,3 +91,5 @@ source ~/.dotfiles/bash/installJava7.bash
 source ~/.dotfiles/bash/createSite.bash
 source ~/.dotfiles/bash/latest.bash
 source ~/.dotfiles/bash/git.bash
+
+export PS1='\[\e[33m\]\h\[\e[0m\]:\W\[\e[33m\]$(__git_ps1 "(%s)")\[\e[0m\] \u\$ '
