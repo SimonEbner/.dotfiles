@@ -18,6 +18,7 @@ function createSite(){
     sudo tee "/etc/apache2/sites-available/$name" << EOF
 <VirtualHost *:80>
     ServerName $domain
+    LogLevel debug
     DocumentRoot $path
     <Directory $path>
         AllowOverride all
