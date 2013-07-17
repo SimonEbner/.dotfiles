@@ -93,5 +93,6 @@ source ~/.dotfiles/bash/latest.bash
 source ~/.dotfiles/bash/installScss.bash
 source ~/.dotfiles/bash/git.bash
 source ~/.dotfiles/bash/installNode.bash
+source ~/.dotfiles/bash/git_notpushed.bash
 
 export PS1='`if [ $? = 0 ]; then echo "\[\033[01;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \[\033[01;30m\]\h\[\033[01;34m\] \w\[\033[33m\]$(__git_ps1 " %s") \[\033[01;30m\]>\[\033[00m\] '
