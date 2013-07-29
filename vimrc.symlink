@@ -114,3 +114,7 @@ else
 endif
 
 map <F2> :TlistToggle<CR>
+
+"spelling
+map <F8> :setlocal spell spelllang=de<CR>
+map <F9> :setlocal spell spelllang=en<CR>
