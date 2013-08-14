@@ -39,11 +39,8 @@
 :set fileencoding=utf-8
 :set autochdir
 
-if filereadable( expand( '~/.vim/buildHaml.vim' ))
-    source ~/.vim/buildHaml.vim
-else
-    source ~/vimfiles/buildHaml.vim
-endif
+let vimrcPath = fnamemodify( resolve( $MYVIMRC ), ':h' )
+execute "source " . vimrcPath . "/build.vim"
 :redraw
 
 :set modeline
@@ -119,3 +116,4 @@ map <F2> :TlistToggle<CR>
 map <F8> :setlocal spell spelllang=de<CR>
 map <F9> :setlocal spell spelllang=en<CR>
 map <F7> :setlocal spell spelllang=<CR>
+map <C-n> ]s
