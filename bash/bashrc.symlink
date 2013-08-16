@@ -86,3 +86,4 @@ source ~/.dotfiles/bash/git_notpushed.bash
 source ~/.dotfiles/bash/killAllRos.bash
 source ~/.dotfiles/bash/acd_func.sh
 source ~/.dotfiles/bash/ps1.bash
+source ~/.dotfiles/bash/topCommands.bash
