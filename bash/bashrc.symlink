@@ -62,8 +62,13 @@ export EDITOR="vim"
 #source /home/webportal/git/care-o-bot/setup.sh
 
 #set keyboard layout
-type setxkbmap 1>/dev/null 2>&1 && setxkbmap de
-
+type setxkbmap 1>/dev/null 2>&1 && {
+    if [ -f /usr/share/X11/xkb/symbols/de2 ]; then
+        setxkbmap de2 neolayer2
+    else
+        setxkbmap de
+    fi
+}
 
 source ~/.dotfiles/bash/path.bash
 source ~/.dotfiles/vim.symlink/single-instance.bash
