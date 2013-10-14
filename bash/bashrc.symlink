@@ -89,3 +89,4 @@ source ~/.dotfiles/bash/ps1.bash
 source ~/.dotfiles/bash/aws.bash
 source ~/.dotfiles/bash/topCommands.bash
 source ~/.dotfiles/bash/scss.bash
+source ~/.dotfiles/bash/setTerminatorAsDefault.bash
