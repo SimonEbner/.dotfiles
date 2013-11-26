@@ -117,3 +117,10 @@ map <F8> :setlocal spell spelllang=de<CR>
 map <F9> :setlocal spell spelllang=en<CR>
 map <F7> :setlocal spell spelllang=<CR>
 map <C-n> ]s
+
+
+" Switch between splits
+nnoremap <silent> <C-Right> <c-w>l
+nnoremap <silent> <C-Left> <c-w>h
+nnoremap <silent> <C-Up> <c-w>k
+nnoremap <silent> <C-Down> <c-w>j
