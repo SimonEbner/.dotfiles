@@ -1,7 +1,8 @@
 if [ -f /opt/ros/groovy/setup.bash ]; then
     source /opt/ros/groovy/setup.bash
 fi
-export ROS_PACKAGE_PATH=~/ba:~/git/care-o-bot:$ROS_PACKAGE_PATH
+
+export ROS_PACKAGE_PATH=~/ros:$ROS_PACKAGE_PATH
 export ROBOT=cob3-6
 export ROBOT_ENV=ipa-kitchen
 
