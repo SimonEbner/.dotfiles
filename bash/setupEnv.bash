@@ -31,4 +31,5 @@ function setupEnv(){
     assertInstalled xclip
     assertInstalled exuberant-ctags
     assertInstalled audacious
+    assertInstalled qpdfview
 }
