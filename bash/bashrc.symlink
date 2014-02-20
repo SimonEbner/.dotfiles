@@ -91,3 +91,4 @@ source ~/.dotfiles/bash/topCommands.bash
 source ~/.dotfiles/bash/scss.bash
 source ~/.dotfiles/bash/setTerminatorAsDefault.bash
 source ~/.dotfiles/bash/git-completion.bash
+source ~/.dotfiles/bash/searchPdf.bash
