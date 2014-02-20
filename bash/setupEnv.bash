@@ -32,4 +32,5 @@ function setupEnv(){
     assertInstalled exuberant-ctags
     assertInstalled audacious
     assertInstalled qpdfview
+    assertInstalled xbindkeys xbindkeys-config
 }
