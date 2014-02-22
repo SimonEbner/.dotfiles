@@ -1,4 +1,4 @@
-function searchPdf(){
+function searchpdf(){
     first="$1"
     second="$2"
 
