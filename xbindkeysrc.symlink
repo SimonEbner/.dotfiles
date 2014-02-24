@@ -56,7 +56,7 @@
     Mod2+Mod4 + t 
 
 #Qpdfview
-"bash -c "wmctrl -a qpdfview"
+"bash -c "wmctrl -a qpdfview""
     m:0x50 + c:24
     Mod2+Mod4 + q 
 
