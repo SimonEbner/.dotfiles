@@ -27,8 +27,14 @@ link_files () {
                 echo "Removing symlink $destBackup that pointed to $loc"
                 rm $destBackup;
             elif [ -f $destBackup ] || [ -d $destBackup ]; then
-                printf "Backup $destBackup exists already. Remove first\n"
-                exit 1
+                msg="Backup $destBackup exists already. Skip link? "
+                read -p "$msg" -n 1 -r
+                if [[ $REPLY =~ ^[Yy]$ ]]; then
+                    continue
+                else
+                    echo "Stopping."
+                    exit 1
+                fi
             fi
             printf "Backup of existing file \n"
             mv $dest $destBackup
