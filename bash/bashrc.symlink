@@ -92,3 +92,4 @@ source ~/.dotfiles/bash/scss.bash
 source ~/.dotfiles/bash/setTerminatorAsDefault.bash
 source ~/.dotfiles/bash/git-completion.bash
 source ~/.dotfiles/bash/searchpdf.bash
+source ~/.dotfiles/bash/sortFoldersBySize.bash
