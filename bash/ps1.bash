@@ -126,4 +126,5 @@ else \
 fi)'
 }
 
+alias shortenPath='shrinkPath'
 extendPath
