@@ -126,3 +126,10 @@ nnoremap <silent> <C-Up> <c-w>k
 nnoremap <silent> <C-Down> <c-w>j
 
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+let g:ycm_key_list_select_completion = ['<C-A>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-A>'
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+"
+"let g:UltiSnipsExpandTrigger="<c-a>"
