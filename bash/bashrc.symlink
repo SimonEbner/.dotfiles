@@ -94,3 +94,4 @@ source ~/.dotfiles/bash/git-completion.bash
 source ~/.dotfiles/bash/searchpdf.bash
 source ~/.dotfiles/bash/sortFoldersBySize.bash
 source ~/.dotfiles/bash/setVimAsDefaultEditor.bash
+source ~/.dotfiles/bash/eclipse.bash
