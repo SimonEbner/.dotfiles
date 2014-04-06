@@ -137,7 +137,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 let g:EclimCompletionMethod = 'omnifunc'
 
 " Disable the scratch preview window
-"set completeopt-=preview
+set completeopt-=preview
 
 " Close scratch preview after completion box is closed
 "let g:SuperTabClosePreviewOnPopupClose = 1
