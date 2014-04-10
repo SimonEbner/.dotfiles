@@ -141,3 +141,8 @@ set completeopt-=preview
 
 " Close scratch preview after completion box is closed
 "let g:SuperTabClosePreviewOnPopupClose = 1
+"
+inoremap <C-T> <C-O>:JavaImport<CR>
+nnoremap <C-T> :JavaImport<CR>
+inoremap <C-G> <C-O>:JavaImpl<CR><S-G>
+nnoremap <C-G> :JavaImpl<CR><S-G>
