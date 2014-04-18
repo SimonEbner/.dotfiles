@@ -5,7 +5,9 @@ if [ "$SUPPORTS" != '' ];then
     alias vim="single-vim"
 fi
 
-export VIM_ID="VIM$RANDOM"
+if [ -z "$pid" ]; then
+    export VIM_ID="VIM$RANDOM"
+fi
 
 function single-vim(){
     filename=$1
@@ -13,12 +15,21 @@ function single-vim(){
     if [ ! -f "$filename" ] && [ -f "$filenameWithoutDouble" ]; then
         filename=$filenameWithoutDouble
     fi
-    pid=`$VIM_SINGLE --serverlist | grep $VIM_ID`
-    if [ -z "$pid" ]; then
-        $VIM_SINGLE --servername $VIM_ID $filename
-    else
+
+    `$VIM_SINGLE --serverlist | grep ${VIM_ID}$`
+    if [ $? -eq 0 ]; then
         $VIM_SINGLE --servername $VIM_ID --remote-tab $filename
         $VIM_SINGLE --servername $VIM_ID --remote-send ':tabp<CR>:tabn<CR>'
         fg
+    else
+        `$VIM_SINGLE --serverlist | grep ${VIM_ID}1`
+        if [ $? -eq 0 ]; then
+            export VIM_ID=${VIM_ID}1
+            $VIM_SINGLE --servername $VIM_ID --remote-tab $filename
+            $VIM_SINGLE --servername $VIM_ID --remote-send ':tabp<CR>:tabn<CR>'
+            fg
+        else
+            $VIM_SINGLE --servername $VIM_ID $filename
+        fi
     fi
 }
