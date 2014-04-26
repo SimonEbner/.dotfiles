@@ -1,10 +1,13 @@
 [global_config]
+  always_split_with_profile = True
 [keybindings]
 [profiles]
   [[default]]
     scroll_on_output = False
     font = Monospace 9
     use_system_font = False
+    scrollback_infinite = True
+    background_image = None
 [layouts]
   [[default]]
     [[[child1]]]
