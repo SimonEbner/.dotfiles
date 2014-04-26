@@ -42,4 +42,5 @@ function setupEnv(){
     assertInstalled libncurses5:i386
     assertInstalled ant
     assertInstalled cmake
+    assertInstalled python-dev
 }
