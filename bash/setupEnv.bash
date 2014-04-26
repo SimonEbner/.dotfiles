@@ -32,4 +32,7 @@ function setupEnv(){
     assertInstalled audacious
     assertInstalled qpdfview
     assertInstalled xbindkeys xbindkeys-config
+    # adb,http://askubuntu.com/questions/73491/no-such-file-or-directory-for-existing-executable 
+    assertInstalled libc6:i386 libstdc++6:i386
+    assertInstalled zlib1g:i386
 }
