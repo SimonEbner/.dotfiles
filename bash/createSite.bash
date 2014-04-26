@@ -23,6 +23,7 @@ function createSite(){
     <Directory $path>
         AllowOverride all
         Options +Indexes
+        Require all granted
     </Directory>
     ErrorLog $path/apacheLogs/error.log                       
     CustomLog $path/apacheLogs/access.log combined            
