@@ -41,4 +41,5 @@ function setupEnv(){
     # http://askubuntu.com/questions/143774/android-sdk-having-trouble-with-adb
     assertInstalled libncurses5:i386
     assertInstalled ant
+    assertInstalled cmake
 }
