@@ -25,7 +25,6 @@ function setupEnv(){
     assertInstalled htop
     assertInstalled aptitude
     assertInstalled unrar
-    assertInstalled ia32-libs
     assertInstalled filezilla
     assertInstalled nemo
     assertInstalled xclip
