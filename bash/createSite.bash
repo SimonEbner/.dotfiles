@@ -24,6 +24,8 @@ function createSite(){
         AllowOverride all
         Options +Indexes
     </Directory>
+    ErrorLog $path/apacheLogs/error.log                       
+    CustomLog $path/apacheLogs/access.log combined            
 </VirtualHost>
 EOF
 
