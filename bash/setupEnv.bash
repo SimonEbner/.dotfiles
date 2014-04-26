@@ -43,4 +43,5 @@ function setupEnv(){
     assertInstalled ant
     assertInstalled cmake
     assertInstalled python-dev
+    assertInstalled build-essential
 }
