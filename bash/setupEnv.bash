@@ -31,8 +31,13 @@ function setupEnv(){
     assertInstalled exuberant-ctags
     assertInstalled audacious
     assertInstalled qpdfview
-    assertInstalled xbindkeys xbindkeys-config
-    # adb,http://askubuntu.com/questions/73491/no-such-file-or-directory-for-existing-executable 
-    assertInstalled libc6:i386 libstdc++6:i386
+    assertInstalled xbindkeys
+    assertInstalled xbindkeys-config
+    # files required for adb
+    # http://askubuntu.com/questions/73491/no-such-file-or-directory-for-existing-executable 
+    assertInstalled libc6:i386
+    assertInstalled libstdc++6:i386
     assertInstalled zlib1g:i386
+    # http://askubuntu.com/questions/143774/android-sdk-having-trouble-with-adb
+    assertInstalled libncurses5:i386
 }
