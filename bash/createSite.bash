@@ -15,7 +15,7 @@ function createSite(){
     fi
 
     echo "127.0.0.1   $domain" | sudo tee -a /etc/hosts
-    sudo tee "/etc/apache2/sites-available/$name" << EOF
+    sudo tee "/etc/apache2/sites-available/$name.conf" << EOF
 <VirtualHost *:80>
     ServerName $domain
     LogLevel debug
@@ -27,7 +27,7 @@ function createSite(){
 </VirtualHost>
 EOF
 
-    sudo a2ensite "$1"
+    sudo a2ensite "$name.conf"
     sudo service apache2 reload
     echo ""
     echo "Set up $name: $domain ~> $path"
