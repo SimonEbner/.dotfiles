@@ -15,6 +15,7 @@ function createSite(){
     fi
 
     echo "127.0.0.1   $domain" | sudo tee -a /etc/hosts
+    sudo mkdir -p /var/log/apache2/vhosts/$name
     sudo tee "/etc/apache2/sites-available/$name.conf" << EOF
 <VirtualHost *:80>
     ServerName $domain
@@ -25,8 +26,8 @@ function createSite(){
         Options +Indexes
         Require all granted
     </Directory>
-    ErrorLog $path/apacheLogs/error.log                       
-    CustomLog $path/apacheLogs/access.log combined            
+    ErrorLog /var/log/apache2/vhosts/$name/error.log
+    CustomLog /var/log/apache2/vhosts/$name/access.log combined
 </VirtualHost>
 EOF
 
