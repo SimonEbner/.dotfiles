@@ -97,3 +97,4 @@ source ~/.dotfiles/bash/setVimAsDefaultEditor.bash
 source ~/.dotfiles/bash/eclipse.bash
 source ~/.dotfiles/bash/disableSuper.bash
 source ~/.dotfiles/bash/installNodeAndMongo.bash
+source ~/.dotfiles/bash/monitor.bash
