@@ -149,4 +149,3 @@ nnoremap <C-T> :JavaImport<CR>
 inoremap <C-G> <C-O>:JavaImpl<CR><S-G>
 nnoremap <C-G> :JavaImpl<CR><S-G>
 let g:indentLine_color_term=237
-let g:ycm_filetype_specific_completion_to_disable={'python':1}
