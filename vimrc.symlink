@@ -144,3 +144,6 @@ nnoremap <C-T> :JavaImport<CR>
 inoremap <C-G> <C-O>:JavaImpl<CR><S-G>
 nnoremap <C-G> :JavaImpl<CR><S-G>
 let g:indentLine_color_term=237
+
+"inverse tab
+imap <S-Tab> <Esc>xxxi
