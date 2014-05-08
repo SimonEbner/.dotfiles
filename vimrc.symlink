@@ -146,4 +146,4 @@ nnoremap <C-G> :JavaImpl<CR><S-G>
 let g:indentLine_color_term=237
 
 "inverse tab
-imap <S-Tab> <Esc>xxxi
+imap <C-U> <Esc>xxxi
