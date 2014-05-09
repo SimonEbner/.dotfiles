@@ -35,3 +35,6 @@
 	path = bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine
     ignore=dirty
+[submodule "bundle/vimipython"]
+	path = bundle/vimipython
+	url = git@github.com:ivanov/vim-ipython.git
