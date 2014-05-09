@@ -112,12 +112,13 @@ endif
 
 map <F2> :TlistToggle<CR>
 
-"spelling
-map <F8> :setlocal spell spelllang=de<CR>
-map <F9> :setlocal spell spelllang=en<CR>
-map <F7> :setlocal spell spelllang=<CR>
-map <C-n> ]s
+" folding
+nnoremap <F8> za
+inoremap <F8> <C-O>za
 
+" run block when pressing f10
+nmap <F10> <C-M-s>
+imap <F10> <C-O><C-M-s>
 
 " Switch between splits
 nnoremap <silent> <C-Right> <c-w>l
