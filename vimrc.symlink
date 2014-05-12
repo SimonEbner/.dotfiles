@@ -117,8 +117,8 @@ nnoremap <F8> za
 inoremap <F8> <C-O>za
 
 " run block when pressing f10
-nmap <F10> <C-M-s>
-imap <F10> <C-O><C-M-s>
+nmap <F12> <C-M-s>
+imap <F12> <C-O><C-M-s>
 
 " Switch between splits
 nnoremap <silent> <C-Right> <c-w>l
