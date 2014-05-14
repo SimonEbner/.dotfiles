@@ -70,6 +70,9 @@ type setxkbmap 1>/dev/null 2>&1 && {
     fi
 }
 
+# free ctrl-s for use in ohter programs e.g. vim
+stty stop undef # to unmap ctrl-s
+
 source ~/.dotfiles/bash/path.bash
 source ~/.dotfiles/vim.symlink/single-instance.bash
 source ~/.dotfiles/bash/aliases.bash
