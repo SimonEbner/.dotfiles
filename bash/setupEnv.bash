@@ -44,4 +44,6 @@ function setupEnv(){
     assertInstalled cmake
     assertInstalled python-dev
     assertInstalled build-essential
+    assertInstalled silversearcher-ag
+    assertInstalled python-pip
 }
