@@ -15,6 +15,10 @@ function installEclipse(){
 }
 
 function installEclimd(){
+    if [ -e ~/.vim/plugin/eclim.vim ]; then
+        echo 'Eclimd already installed'
+        return
+    fi
     installEclipse
     wget http://garr.dl.sourceforge.net/project/eclim/eclim/2.3.4/eclim_2.3.4.jar -O /tmp/eclimd.jar
     java -jar /tmp/eclimd.jar
