@@ -93,7 +93,6 @@ if has( 'win32' )
     colorscheme default
 else
     colorscheme wombat256mod
-    colorscheme grb256
 endif
 
 map <F2> :TlistToggle<CR>
