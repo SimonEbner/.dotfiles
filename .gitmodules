@@ -41,3 +41,6 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "bundle/vim-diminactive"]
+	path = bundle/vim-diminactive
+	url = https://github.com/blueyed/vim-diminactive

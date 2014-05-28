@@ -131,3 +131,5 @@ let g:indentLine_color_term=237
 
 "inverse tab
 imap <C-U> <Esc>xxxi
+
+hi ColorColumn  ctermbg=8
