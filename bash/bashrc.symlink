@@ -102,3 +102,4 @@ source ~/.dotfiles/bash/disableSuper.bash
 source ~/.dotfiles/bash/installNodeAndMongo.bash
 source ~/.dotfiles/bash/monitor.bash
 source ~/.dotfiles/bash/dbusAddr.bash
+source ~/.dotfiles/bash/installRepo.bash
