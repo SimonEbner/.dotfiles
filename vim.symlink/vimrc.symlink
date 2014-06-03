@@ -1,0 +1,136 @@
+:syntax on
+:set fileformat=unix
+:call pathogen#infect()
+:call pathogen#runtime_append_all_bundles()
+:call pathogen#helptags()
+:filetype plugin indent on
+:set autoindent
+:set pastetoggle=<F10>
+:set showmatch
+:set ignorecase
+:set smartcase
+:set matchtime=0
+:set hlsearch
+:set incsearch
+:nnoremap <C-j> :tabn<CR>
+:nnoremap <C-k> :tabp<CR>
+:inoremap <C-j> <C-o>:tabn<CR>
+:inoremap <C-k> <C-o>:tabp<CR>
+:inoremap <C-z> <C-o><C-z>
+:nnoremap x "_x
+:nnoremap dx "_dd
+
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+:set backup
+:set backupdir=~/.vim/backup,~/vimfiles/backup
+:set directory=~/.vim/tmp,~/vimfiles/tmp
+:set smarttab
+:set bs=2
+
+:set nocindent
+:set linebreak
+:set showbreak=...
+
+:set encoding=utf-8
+:set fileencoding=utf-8
+:set autochdir
+
+let vimrcPath = fnamemodify( resolve( $MYVIMRC ), ':h' )
+execute "source " . vimrcPath . "/build.vim"
+:redraw
+
+:set modeline
+:set ls=2
+if exists('+colorcolumn')
+    set colorcolumn=80
+else
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%81v.\+/
+endif
+
+
+au BufNewFile,BufReadPost *.coffee setl sw=2 sts=2 et
+au BufNewFile,BufReadPost *.eco setl sw=2 sts=2 et
+
+"
+" Camel Case Movment
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
+
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+
+
+" powerline
+set nocompatible
+set t_Co=256
+"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+hi User1 guifg=#eea040 guibg=#222222
+hi User2 guifg=#dd3333 guibg=#222222
+hi User3 guifg=#ff66ff guibg=#222222
+hi User4 guifg=#a0ee40 guibg=#222222
+hi User5 guifg=#eeee40 guibg=#222222
+
+
+" save as admin
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+command Wq :execute ':W' | :q
+command WQ :Wq
+
+if has( 'win32' )
+    colorscheme default
+else
+    colorscheme wombat256mod
+endif
+
+map <F2> :TlistToggle<CR>
+
+" folding
+nnoremap <F8> za
+inoremap <F8> <C-O>za
+
+" run block when pressing f10
+nmap <F12> <C-M-s>
+imap <F12> <C-O><C-M-s>
+
+" Switch between splits
+nnoremap <silent> <C-Right> <c-w>l
+nnoremap <silent> <C-Left> <c-w>h
+nnoremap <silent> <C-Up> <c-w>k
+nnoremap <silent> <C-Down> <c-w>j
+
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+let g:UltiSnipsExpandTrigger = '<f6>'
+
+" Integrate eclim with ycm
+let g:EclimCompletionMethod = 'omnifunc'
+
+" Disable the scratch preview window
+set completeopt-=preview
+
+" Close scratch preview after completion box is closed
+"let g:SuperTabClosePreviewOnPopupClose = 1
+"
+inoremap <C-T> <C-O>:JavaImport<CR>
+nnoremap <C-T> :JavaImport<CR>
+inoremap <C-G> <C-O>:JavaImpl<CR><S-G>
+nnoremap <C-G> :JavaImpl<CR><S-G>
+let g:indentLine_color_term=237
+
+"inverse tab
+imap <C-U> <Esc>xxxi
+
+hi ColorColumn ctermbg=0
+hi ColorColumn ctermfg=7
