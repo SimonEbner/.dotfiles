@@ -48,3 +48,6 @@
 [submodule "oh-my-zsh.symlink"]
 	path = oh-my-zsh.symlink
 	url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "zsh.symlink/git-prompt"]
+	path = zsh.symlink/git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt
