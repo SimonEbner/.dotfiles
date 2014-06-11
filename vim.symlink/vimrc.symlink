@@ -19,6 +19,8 @@
 :inoremap <C-z> <C-o><C-z>
 :nnoremap x "_x
 :nnoremap dx "_dd
+:cnoreabbrev wq w<bar>bd
+:cnoreabbrev q bd
 
 :set tabstop=4
 :set shiftwidth=4
