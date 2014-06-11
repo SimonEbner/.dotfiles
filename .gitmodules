@@ -26,9 +26,6 @@
 [submodule "bundle/ultisnips"]
 	path = vim.symlink/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
-[submodule "bundle/supertab"]
-	path = vim.symlink/bundle/supertab
-	url = https://github.com/ervandew/supertab
 [submodule "bundle/vim-snippets"]
 	path = vim.symlink/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
