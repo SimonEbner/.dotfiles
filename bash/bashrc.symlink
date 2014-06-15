@@ -104,3 +104,4 @@ source ~/.dotfiles/bash/monitor.bash
 source ~/.dotfiles/bash/dbusAddr.bash
 source ~/.dotfiles/bash/installRepo.bash
 source ~/.dotfiles/bash/setZshAsDefaultBash.bash
+source ~/.dotfiles/bash/buildYCM.bash
