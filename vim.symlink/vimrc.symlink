@@ -129,6 +129,8 @@ inoremap <C-T> <C-O>:JavaImport<CR>
 nnoremap <C-T> :JavaImport<CR>
 inoremap <C-G> <C-O>:JavaImpl<CR><S-G>
 nnoremap <C-G> :JavaImpl<CR><S-G>
+inoremap <C-F12> <C-O>:ProjectProblems!<CR><S-G>
+nnoremap <C-F12> :ProjectProblems!<CR><S-G>
 let g:indentLine_color_term=237
 
 "inverse tab
