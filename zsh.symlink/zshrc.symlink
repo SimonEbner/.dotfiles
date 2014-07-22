@@ -113,3 +113,6 @@ bindkey "\e[B" history-beginning-search-forward-end
 
 # Auto pushd
 setopt autopushd
+
+# free ctrl-s for use in ohter programs e.g. vim
+stty stop undef # to unmap ctrl-s
