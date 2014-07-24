@@ -7,7 +7,7 @@ function! Build()
             if filereadable( l:absPath )
                 let l:output = system( l:absPath . ' "' . expand( '%:p' ). '"' )
                 let l:output = substitute( l:output, '\n', '', '' )
-                echo 'Executed build-script ' . l:absPath . ': ' . l:output
+                "echo 'Executed build-script ' . l:absPath . ': ' . l:output
                 return
             endif
         endfor
