@@ -1,10 +1,10 @@
 function searchpdf(){
-    first="$1"
-    second="$2"
+    local first="$1"
+    local second="$2"
 
-    path='.'
-    string=''
-    ignoreCase=''
+    local p='.'
+    local string=''
+    local ignoreCase=''
     if [ "$1" = "-i" ]; then
         ignoreCase='-i'
         first="$2"
@@ -13,9 +13,9 @@ function searchpdf(){
     if [ -z "$second" ]; then
         string="$first";
     else
-        path="$first";
+        p="$first";
         string="$second";
     fi
     cmd='pdftotext "{}" - | grep '"$ignoreCase"' --with-filename --label="{}" --color '"\"$string\""
-    find $path -name '*.pdf' -exec bash -c "$cmd" \;
+    find $p -name '*.pdf' -exec bash -c "$cmd" \;
 }
