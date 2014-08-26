@@ -1,14 +1,14 @@
 #!/bin/bash
 function createSite(){
     name=$1
-    path=$2
+    p=$2
     domain=$3
     if [ -z "$name" ]; then
         echo "Usage: createSite name [path] [domain]";
         return
     fi
-    if [ -z "$path" ]; then
-        path="$HOME/dev/$1"
+    if [ -z "$p" ]; then
+        p="$HOME/dev/$1"
     fi
     if [ -z "$domain" ]; then
         domain="$1.localhost"
@@ -20,8 +20,8 @@ function createSite(){
 <VirtualHost *:80>
     ServerName $domain
     LogLevel debug
-    DocumentRoot $path
-    <Directory $path>
+    DocumentRoot $p
+    <Directory $p>
         AllowOverride all
         Options +Indexes
         Require all granted
@@ -34,6 +34,6 @@ EOF
     sudo a2ensite "$name.conf"
     sudo service apache2 reload
     echo ""
-    echo "Set up $name: $domain ~> $path"
+    echo "Set up $name: $domain ~> $p"
     echo ""
 }
