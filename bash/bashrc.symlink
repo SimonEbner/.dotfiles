@@ -62,13 +62,7 @@ export EDITOR="vim"
 #source /home/webportal/git/care-o-bot/setup.sh
 
 #set keyboard layout
-type setxkbmap 1>/dev/null 2>&1 && {
-    if [ -f /usr/share/X11/xkb/symbols/de2 ]; then
-        setxkbmap de2 neolayer2
-    else
-        setxkbmap de 2>/dev/null
-    fi
-}
+setxkbmap de 2>/dev/null
 
 # free ctrl-s for use in ohter programs e.g. vim
 stty stop undef # to unmap ctrl-s
