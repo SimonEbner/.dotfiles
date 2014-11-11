@@ -32,6 +32,8 @@ c.InteractiveShellApp.exec_lines = []
 c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
 c.InteractiveShellApp.exec_lines.append('%autoreload 2')
 c.InteractiveShellApp.exec_lines.append('print "{0}\\nWarning: disable autoreload in ipython_config.py to improve performance.\\n{0}".format( \'-\'*72) ')
+c.InteractiveShellApp.exec_lines.append('try:\n import pandas as pd; import numpy as np; from matplotlib import pyplot as plt\nexcept:\n pass')
+c.InteractiveShellApp.exec_lines.append('print "Pandas, Numpy and matplotlib imported"' )
 
 # Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'none',
 # 'osx', 'pyglet', 'qt', 'qt4', 'tk', 'wx').
