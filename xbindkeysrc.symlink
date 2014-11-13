@@ -51,7 +51,7 @@
     Mod2+Mod4 + n 
 
 #Bring terminator to the front
-"bash -c 'wmctrl -a "simon@" || wmctrl -a "vim" || wmctrl -a "/bin/bash" || wmctrl -a "ipython"'"
+"bash -c 'wmctrl -a "simon@" || wmctrl -a "vim" || wmctrl -a "/bin/bash" || wmctrl -a "ipython" || wmctrl -a "fg"'"
     m:0x50 + c:28
     Mod2+Mod4 + t 
 
