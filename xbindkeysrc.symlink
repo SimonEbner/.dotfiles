@@ -79,5 +79,9 @@
 "bash -c "wmctrl -a audacious || { audacious && for i in {1..10}; do wmctrl -a audacious && break; sleep 0.1; done; }""
    Mod2+Mod4 + a
 
+#Evince
+"bash -c "wmctrl -a .pdf""
+   Mod2+Mod4 + e
+
 #
 # End of xbindkeys configuration
