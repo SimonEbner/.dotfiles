@@ -1,0 +1,6 @@
+*
+!.gitignore
+!ipython_config.py
+!ipython_nbconvert_config.py
+!ipython_qtconsole_config.py
+!ipython_notebook_config.py
