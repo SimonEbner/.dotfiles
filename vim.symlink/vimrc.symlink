@@ -138,3 +138,10 @@ hi ColorColumn ctermbg=0
 hi ColorColumn ctermfg=7
 cabbrev E Explore
 let g:tex_conceal = ""
+
+" https://superuser.com/questions/302186/vim-scrolls-very-slow-when-a-line-is-too-long
+" stop highlighting after 128 characters (massive performance improv)
+set synmaxcol=128
+set ttyfast " u got a fast terminal
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
