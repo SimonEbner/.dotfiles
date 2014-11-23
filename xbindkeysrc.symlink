@@ -83,5 +83,10 @@
 "bash -c "wmctrl -a .pdf""
    Mod2+Mod4 + e
 
+#RStudio
+"bash -c "wmctrl -a rstudio""
+    m:0x50 + c:27
+    Mod2+Mod4 + r 
+
 #
 # End of xbindkeys configuration
