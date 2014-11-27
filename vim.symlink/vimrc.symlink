@@ -97,8 +97,12 @@ endif
 
 map <F2> :TlistToggle<CR>
 
-" folding
-nnoremap <F8> za
+" folding, open all folds
+nnoremap <F8> zr
+" close all folds
+nnoremap <S-F8> zm
+" open fold with space
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 inoremap <F8> <C-O>za
 
 " run block when pressing f10
