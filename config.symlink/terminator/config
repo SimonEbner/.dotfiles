@@ -1,21 +1,15 @@
 [global_config]
-  always_split_with_profile = True
 [keybindings]
 [profiles]
   [[default]]
-    scroll_on_output = False
-    font = Monospace 9
-    use_system_font = False
-    scrollback_infinite = True
-    background_image = None
+    use_custom_command = True
+    custom_command = /bin/zsh
 [layouts]
   [[default]]
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = default
     [[[window0]]]
       type = Window
       parent = ""
-      size = 730,452
 [plugins]

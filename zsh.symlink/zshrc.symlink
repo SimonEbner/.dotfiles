@@ -100,6 +100,7 @@ source ~/.dotfiles/bash/monitor.bash
 source ~/.dotfiles/bash/dbusAddr.bash
 source ~/.dotfiles/bash/installRepo.bash
 source ~/.dotfiles/bash/buildYCM.bash
+source ~/.dotfiles/bash/MPI.bash
 
 
 # Cycle through history
@@ -120,3 +121,4 @@ stty stop undef # to unmap ctrl-s
 # autojump
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
+setxkbmap de
