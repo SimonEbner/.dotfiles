@@ -76,7 +76,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 source ~/.dotfiles/bash/path.bash
 source ~/.dotfiles/vim.symlink/single-instance.bash
 source ~/.dotfiles/bash/aliases.bash
-source ~/.dotfiles/bash/ros.bash
+source ~/.dotfiles/bash/ros.zsh
 source ~/.dotfiles/bash/android.bash
 source ~/.dotfiles/bash/setupEnv.bash
 source ~/.dotfiles/bash/installJava7.bash
@@ -121,5 +121,4 @@ stty stop undef # to unmap ctrl-s
 # autojump
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
-setxkbmap de
-setxkbmap -variant "nodeadkeys"
+setxkbmap de -variant "nodeadkeys"
