@@ -120,3 +120,4 @@ stty stop undef # to unmap ctrl-s
 # autojump
 [[ -s /home/simon/.autojump/etc/profile.d/autojump.sh ]] && source /home/simon/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
+setxkbmap de -variant "nodeadkeys"

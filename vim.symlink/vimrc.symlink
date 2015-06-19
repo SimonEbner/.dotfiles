@@ -12,6 +12,8 @@
 :set matchtime=0
 :set hlsearch
 :set incsearch
+:noremap <C-a> <C-w>
+:noremap <C-a><C-a> <C-w><C-w>
 :nnoremap <C-j> :tabn<CR>
 :nnoremap <C-k> :tabp<CR>
 :inoremap <C-j> <C-o>:tabn<CR>
@@ -127,8 +129,6 @@ set completeopt-=preview
 " Close scratch preview after completion box is closed
 "let g:SuperTabClosePreviewOnPopupClose = 1
 "
-inoremap <C-T> <C-O>:JavaImport<CR>
-nnoremap <C-T> :JavaImport<CR>
 inoremap <C-G> <C-O>:JavaImpl<CR><S-G>
 nnoremap <C-G> :JavaImpl<CR><S-G>
 inoremap <C-F12> <C-O>:ProjectProblems!<CR><S-G>
