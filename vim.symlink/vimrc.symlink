@@ -133,6 +133,7 @@ inoremap <C-G> <C-O>:JavaImpl<CR><S-G>
 nnoremap <C-G> :JavaImpl<CR><S-G>
 inoremap <C-F12> <C-O>:ProjectProblems!<CR><S-G>
 nnoremap <C-F12> :ProjectProblems!<CR><S-G>
+map <C-n> :NERDTreeToggle<CR>
 let g:indentLine_color_term=237
 
 "inverse tab
@@ -149,3 +150,4 @@ set synmaxcol=128
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
+let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'

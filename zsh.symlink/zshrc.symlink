@@ -100,6 +100,7 @@ source ~/.dotfiles/bash/monitor.bash
 source ~/.dotfiles/bash/dbusAddr.bash
 source ~/.dotfiles/bash/installRepo.bash
 source ~/.dotfiles/bash/buildYCM.bash
+source ~/.dotfiles/bash/MPI.bash
 
 
 # Cycle through history
@@ -118,6 +119,6 @@ setopt autopushd
 stty stop undef # to unmap ctrl-s
 
 # autojump
-[[ -s /home/simon/.autojump/etc/profile.d/autojump.sh ]] && source /home/simon/.autojump/etc/profile.d/autojump.sh
+[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 setxkbmap de -variant "nodeadkeys"
