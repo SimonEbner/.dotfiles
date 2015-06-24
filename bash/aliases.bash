@@ -20,3 +20,4 @@ alias trash='gvfs-trash'
 alias run='gvfs-open'
 
 alias copy='xclip -selection clipboard'
+alias git-lastchanges='for k in `git branch | sed s/^..//`; do echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k --`\\t"$k";done | sort'
