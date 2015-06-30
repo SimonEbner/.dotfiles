@@ -76,7 +76,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 source ~/.dotfiles/bash/path.bash
 source ~/.dotfiles/vim.symlink/single-instance.bash
 source ~/.dotfiles/bash/aliases.bash
-source ~/.dotfiles/bash/ros.zsh
 source ~/.dotfiles/bash/android.bash
 source ~/.dotfiles/bash/setupEnv.bash
 source ~/.dotfiles/bash/installJava7.bash
@@ -86,7 +85,6 @@ source ~/.dotfiles/bash/installScss.bash
 source ~/.dotfiles/bash/git.bash
 source ~/.dotfiles/bash/installNode.bash
 source ~/.dotfiles/bash/git_commands.bash
-source ~/.dotfiles/bash/killAllRos.bash
 source ~/.dotfiles/bash/topCommands.bash
 source ~/.dotfiles/bash/scss.bash
 source ~/.dotfiles/bash/setTerminatorAsDefault.bash
@@ -101,6 +99,7 @@ source ~/.dotfiles/bash/dbusAddr.bash
 source ~/.dotfiles/bash/installRepo.bash
 source ~/.dotfiles/bash/buildYCM.bash
 source ~/.dotfiles/bash/MPI.bash
+source ~/.dotfiles/bash/mk.bash
 
 
 # Cycle through history
@@ -109,7 +108,10 @@ autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 
+# Ctrl-J or Arrow up to search history upwards
+bindkey "^k" history-beginning-search-backward-end
 bindkey "\e[A" history-beginning-search-backward-end
+# Ctrl Arrow down to search history backwards
 bindkey "\e[B" history-beginning-search-forward-end
 
 # Auto pushd
