@@ -100,3 +100,11 @@ source ~/.dotfiles/bash/installRepo.bash
 source ~/.dotfiles/bash/setZshAsDefaultBash.bash
 source ~/.dotfiles/bash/buildYCM.bash
 source ~/.dotfiles/bash/installAutojump.bash
+
+export PATH=/usr/local/cuda-6.5/bin:/home/simon/.autojump/bin:/home/simon/local/bin/eclipse:/home/simon/android-sdks/platform-tools:/home/simon/android-sdks/tools:/home/simon/local/bin:/opt/TurboVNC/bin:/home/simon/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/simon/neo/:/home/simon/.dotfiles/git/commands:/var/lib/gems/1.8/bin
+
+export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64
+
+export PATH=/usr/local/cuda-6.5/bin:/home/simon/.autojump/bin:/home/simon/local/bin/eclipse:/home/simon/android-sdks/platform-tools:/home/simon/android-sdks/tools:/home/simon/local/bin:/opt/TurboVNC/bin:/home/simon/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/simon/neo/:/home/simon/.dotfiles/git/commands:/var/lib/gems/1.8/bin
+
+export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64
