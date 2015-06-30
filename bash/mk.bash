@@ -8,5 +8,6 @@ function mk(){
         echo "NO ERROR"
     fi
     ( echo $FF | GREP_COLOR='01;31' egrep --color=always '^([a-zA-Z0-9/._\-]+\.(cpp|h))|$' | GREP_COLOR='01;36' egrep --color=always 'error:(.*)')
+    ( echo $FF | GREP_COLOR='01;31' egrep --color=always '^([a-zA-Z0-9/._\-]+\.(cpp|h))|$' | GREP_COLOR='01;36' egrep --color=always 'undefined reference(.*)')
     return $code
 }
