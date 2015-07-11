@@ -100,6 +100,7 @@ source ~/.dotfiles/bash/monitor.bash
 source ~/.dotfiles/bash/dbusAddr.bash
 source ~/.dotfiles/bash/installRepo.bash
 source ~/.dotfiles/bash/buildYCM.bash
+source ~/.dotfiles/bash/installAutojump.bash                                    
 source ~/.dotfiles/bash/mk.bash
 
 
@@ -114,6 +115,7 @@ bindkey "^k" history-beginning-search-backward-end
 bindkey "\e[A" history-beginning-search-backward-end
 # Ctrl Arrow down to search history backwards
 bindkey "\e[B" history-beginning-search-forward-end
+bindkey "^k" history-beginning-search-backward-end
 
 # Auto pushd
 setopt autopushd
