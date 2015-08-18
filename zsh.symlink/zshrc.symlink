@@ -100,7 +100,8 @@ source ~/.dotfiles/bash/monitor.bash
 source ~/.dotfiles/bash/dbusAddr.bash
 source ~/.dotfiles/bash/installRepo.bash
 source ~/.dotfiles/bash/buildYCM.bash
-source ~/.dotfiles/bash/MPI.bash
+source ~/.dotfiles/bash/installAutojump.bash                                    
+source ~/.dotfiles/bash/mk.bash
 
 
 # Cycle through history
@@ -109,8 +110,12 @@ autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 
+# Ctrl-J or Arrow up to search history upwards
+bindkey "^k" history-beginning-search-backward-end
 bindkey "\e[A" history-beginning-search-backward-end
+# Ctrl Arrow down to search history backwards
 bindkey "\e[B" history-beginning-search-forward-end
+bindkey "^k" history-beginning-search-backward-end
 
 # Auto pushd
 setopt autopushd

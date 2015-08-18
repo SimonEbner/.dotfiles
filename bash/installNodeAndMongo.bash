@@ -1,4 +1,4 @@
-function installNode(){
+function installNodeFromRepo(){
    sudo apt-get install python-software-properties
    sudo add-apt-repository ppa:chris-lea/node.js
    sudo apt-get update

@@ -12,6 +12,8 @@
 :set matchtime=0
 :set hlsearch
 :set incsearch
+:noremap <C-a> <C-w>
+:noremap <C-a><C-a> <C-w><C-w>
 :nnoremap <C-j> :tabn<CR>
 :nnoremap <C-k> :tabp<CR>
 :inoremap <C-j> <C-o>:tabn<CR>
