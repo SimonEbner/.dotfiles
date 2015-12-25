@@ -48,3 +48,9 @@
 [submodule "vim.symlink/bundle/nerdtree"]
 	path = vim.symlink/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
+[submodule "vim.symlink/bundle/syntax-cpp"]
+	path = vim.symlink/bundle/syntax-cpp
+	url = https://github.com/octol/vim-cpp-enhanced-highlight
+[submodule "vim.symlink/bundle/syntastic"]
+	path = vim.symlink/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic

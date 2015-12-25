@@ -41,12 +41,12 @@
     Mod2+Mod4 + c 
 
 #Bring thunderbird to the front
-"bash -c "wmctrl -a thunder || { thunderbird && for i in {1..10}; do wmctrl -a thunder && break; sleep 0.1; done; }""
+"bash -c "wmctrl -a matlab""
     m:0x50 + c:58
     Mod2+Mod4 + m 
 
 #Start nemo
-"bash -c "wmctrl -a Home || wmctrl -a home/simon || { nemo && for i in {1..10}; do wmctrl -a "Home" && break; sleep 0.1; done; };""
+"bash -c "wmctrl -a Home || wmctrl -a home/simon || { nautilus && for i in {1..10}; do wmctrl -a "Home" && break; sleep 0.1; done; };""
     m:0x50 + c:57
     Mod2+Mod4 + n 
 
