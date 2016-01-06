@@ -12,6 +12,8 @@
 :set matchtime=0
 :set hlsearch
 :set incsearch
+:noremap <C-a> <C-w>
+:noremap <C-a><C-a> <C-w><C-w>
 :nnoremap <C-j> :tabn<CR>
 :nnoremap <C-k> :tabp<CR>
 :inoremap <C-j> <C-o>:tabn<CR>
@@ -67,7 +69,7 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
-let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 
@@ -127,12 +129,11 @@ set completeopt-=preview
 " Close scratch preview after completion box is closed
 "let g:SuperTabClosePreviewOnPopupClose = 1
 "
-inoremap <C-T> <C-O>:JavaImport<CR>
-nnoremap <C-T> :JavaImport<CR>
 inoremap <C-G> <C-O>:JavaImpl<CR><S-G>
 nnoremap <C-G> :JavaImpl<CR><S-G>
 inoremap <C-F12> <C-O>:ProjectProblems!<CR><S-G>
 nnoremap <C-F12> :ProjectProblems!<CR><S-G>
+map <C-n> :NERDTreeToggle<CR>
 let g:indentLine_color_term=237
 
 "inverse tab
@@ -149,3 +150,31 @@ set synmaxcol=128
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
+let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
+
+hi SpellBad term=reverse ctermfg=white ctermbg=darkred guifg=#ffffff guibg=#7f0000 gui=underline
+hi SpellCap guifg=#ffffff guibg=#7f007f
+hi SpellRare guifg=#ffffff guibg=#00007f gui=underline
+hi SpellLocal term=reverse ctermfg=black ctermbg=darkgreen guifg=#ffffff guibg=#7f0000 gui=underline
+
+function! ScreenMovement(movement)
+   if &wrap
+      return "g" . a:movement
+   else
+      return a:movement
+   endif
+endfunction
+onoremap <silent> <expr> j ScreenMovement("j")
+onoremap <silent> <expr> k ScreenMovement("k")
+onoremap <silent> <expr> 0 ScreenMovement("0")
+onoremap <silent> <expr> ^ ScreenMovement("^")
+onoremap <silent> <expr> $ ScreenMovement("$")
+nnoremap <silent> <expr> j ScreenMovement("j")
+nnoremap <silent> <expr> k ScreenMovement("k")
+nnoremap <silent> <expr> 0 ScreenMovement("0")
+nnoremap <silent> <expr> ^ ScreenMovement("^")
+nnoremap <silent> <expr> $ ScreenMovement("$")
+
+setlocal linebreak
+setlocal nolist
+setlocal display+=lastline

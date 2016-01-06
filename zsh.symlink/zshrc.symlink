@@ -76,7 +76,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 source ~/.dotfiles/bash/path.bash
 source ~/.dotfiles/vim.symlink/single-instance.bash
 source ~/.dotfiles/bash/aliases.bash
-source ~/.dotfiles/bash/ros.bash
+source ~/.dotfiles/bash/ros.zsh
 source ~/.dotfiles/bash/android.bash
 source ~/.dotfiles/bash/setupEnv.bash
 source ~/.dotfiles/bash/installJava7.bash
@@ -110,7 +110,10 @@ autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 
+# Ctrl-J or Arrow up to search history upwards
+bindkey "^k" history-beginning-search-backward-end
 bindkey "\e[A" history-beginning-search-backward-end
+# Ctrl Arrow down to search history backwards
 bindkey "\e[B" history-beginning-search-forward-end
 bindkey "^k" history-beginning-search-backward-end
 
@@ -121,13 +124,6 @@ setopt autopushd
 stty stop undef # to unmap ctrl-s
 
 # autojump
-[[ -s /home/simon/.autojump/etc/profile.d/autojump.sh ]] && source /home/simon/.autojump/etc/profile.d/autojump.sh
+[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
-
-export PATH=/usr/local/cuda-6.5/bin:/home/simon/.autojump/bin:/home/simon/local/bin/eclipse:/home/simon/android-sdks/platform-tools:/home/simon/android-sdks/tools:/home/simon/local/bin:/opt/TurboVNC/bin:/home/simon/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/simon/neo/:/home/simon/.dotfiles/git/commands:/var/lib/gems/1.8/bin
-
-export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64
-
-export PATH=/usr/local/cuda-6.5/bin:/home/simon/.autojump/bin:/home/simon/local/bin/eclipse:/home/simon/android-sdks/platform-tools:/home/simon/android-sdks/tools:/home/simon/local/bin:/opt/TurboVNC/bin:/home/simon/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/simon/neo/:/home/simon/.dotfiles/git/commands:/var/lib/gems/1.8/bin
-
-export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64
+setxkbmap de -variant "nodeadkeys"

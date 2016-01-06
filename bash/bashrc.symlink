@@ -61,8 +61,6 @@ export EDITOR="vim"
 #source /opt/ros/cturtle/setup.sh
 #source /home/webportal/git/care-o-bot/setup.sh
 
-#set keyboard layout
-setxkbmap de 2>/dev/null
 
 # free ctrl-s for use in ohter programs e.g. vim
 stty stop undef # to unmap ctrl-s
