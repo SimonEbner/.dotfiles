@@ -54,3 +54,6 @@
 [submodule "vim.symlink/bundle/syntastic"]
 	path = vim.symlink/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
+[submodule "vim.symlink/bundle/flake8"]
+	path = vim.symlink/bundle/flake8
+	url = https://github.com/nvie/vim-flake8
