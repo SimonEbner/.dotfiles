@@ -57,3 +57,6 @@
 [submodule "vim.symlink/bundle/flake8"]
 	path = vim.symlink/bundle/flake8
 	url = https://github.com/nvie/vim-flake8
+[submodule "vim.symlink/bundle/typescript"]
+	path = vim.symlink/bundle/typescript
+	url = https://github.com/leafgarland/typescript-vim

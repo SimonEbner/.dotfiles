@@ -69,7 +69,7 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 
@@ -98,6 +98,7 @@ else
 endif
 
 map <F2> :TlistToggle<CR>
+map <F2> :SyntasticToggleMode<CR>
 
 " folding, open all folds
 nnoremap <F8> zr
@@ -178,3 +179,12 @@ nnoremap <silent> <expr> $ ScreenMovement("$")
 setlocal linebreak
 setlocal nolist
 setlocal display+=lastline
+
+
+  autocmd FileType typescript call s:typescript_filetype_settings()
+  function! s:typescript_filetype_settings()
+    set makeprg=tsc
+  endfunction
+
+let g:syntastic_typescript_tsc_fname = ''
+autocmd BufWritePost *.py call Flake8()
