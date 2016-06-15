@@ -126,4 +126,9 @@ stty stop undef # to unmap ctrl-s
 # autojump
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
-setxkbmap de -variant "nodeadkeys"
+setxkbmap us
+
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/simon/google-cloud-sdk/path.zsh.inc'
+source '/home/simon/google-cloud-sdk/completion.zsh.inc'

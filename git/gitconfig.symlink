@@ -13,3 +13,9 @@
     incoming = log --stat ..@{u}
 [core]
 	excludesfile = /home/uhr-se/.gitignore_global
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[credential]
+	helper = cache

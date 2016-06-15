@@ -33,9 +33,6 @@
 	path = vim.symlink/bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine
     ignore=dirty
-[submodule "bundle/vim-ipython"]
-	path = vim.symlink/bundle/vim-ipython
-	url = https://github.com/wmvanvliet/vim-ipython
 [submodule "bundle/vim-airline"]
 	path = vim.symlink/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
@@ -54,3 +51,6 @@
 [submodule "vim.symlink/bundle/syntastic"]
 	path = vim.symlink/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
+[submodule "vim.symlink/bundle/vim-flake8"]
+	path = vim.symlink/bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8

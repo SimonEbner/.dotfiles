@@ -98,3 +98,9 @@ source ~/.dotfiles/bash/installRepo.bash
 source ~/.dotfiles/bash/setZshAsDefaultBash.bash
 source ~/.dotfiles/bash/buildYCM.bash
 source ~/.dotfiles/bash/installAutojump.bash
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/simon/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/home/simon/google-cloud-sdk/completion.bash.inc'

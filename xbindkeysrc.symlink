@@ -83,7 +83,6 @@
 "bash -c "wmctrl -a .pdf; wmctrl -a Eclipse""
    Mod2+Mod4 + e
 
-
 #RStudio
 "bash -c "wmctrl -a rstudio || { rstudio && for i in {1..10}; do wmctrl -a rstudio && break; sleep 0.1; done; }""""
     m:0x50 + c:27
