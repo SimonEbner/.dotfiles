@@ -187,4 +187,6 @@ setlocal display+=lastline
   endfunction
 
 let g:syntastic_typescript_tsc_fname = ''
+filetype plugin on
+autocmd BufNewFile,BufRead *.py set ft=python
 autocmd BufWritePost *.py call Flake8()
