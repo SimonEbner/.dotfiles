@@ -179,3 +179,6 @@ nnoremap <silent> <expr> $ ScreenMovement("$")
 setlocal linebreak
 setlocal nolist
 setlocal display+=lastline
+
+" Pep 8 check on py file save
+autocmd BufWritePost *.py call Flake8()
