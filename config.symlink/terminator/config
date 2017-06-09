@@ -13,7 +13,7 @@
   [[default]]
     background_image = None
     custom_command = /bin/zsh
-    font = Monospace 12
+    font = Monospace 14
     scroll_on_output = False
     scrollback_infinite = True
     use_custom_command = True

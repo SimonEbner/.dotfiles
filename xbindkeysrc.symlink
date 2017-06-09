@@ -35,10 +35,8 @@
 
 
 
-#Bring Chromium to the front
-"bash -c "wmctrl -a chromium || { chromium-browser && for i in {1..10}; do wmctrl -a chromium && break; sleep 0.1; done; }""
-    m:0x50 + c:54
-    Mod2+Mod4 + c 
+""
+   
 
 #Bring thunderbird to the front
 "bash -c "wmctrl -a matlab""

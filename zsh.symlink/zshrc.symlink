@@ -130,5 +130,7 @@ setxkbmap us
 
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/home/simon/google-cloud-sdk/path.zsh.inc'
-source '/home/simon/google-cloud-sdk/completion.zsh.inc'
+if [ -d '/home/simon/google-cloud-sdk' ]; then
+    source '/home/simon/google-cloud-sdk/path.zsh.inc'
+    source '/home/simon/google-cloud-sdk/completion.zsh.inc'
+fi

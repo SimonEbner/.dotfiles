@@ -99,8 +99,17 @@ source ~/.dotfiles/bash/setZshAsDefaultBash.bash
 source ~/.dotfiles/bash/buildYCM.bash
 source ~/.dotfiles/bash/installAutojump.bash
 
+export PATH=/usr/local/cuda-6.5/bin:/home/simon/.autojump/bin:/home/simon/local/bin/eclipse:/home/simon/android-sdks/platform-tools:/home/simon/android-sdks/tools:/home/simon/local/bin:/opt/TurboVNC/bin:/home/simon/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/simon/neo/:/home/simon/.dotfiles/git/commands:/var/lib/gems/1.8/bin
+
+export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64
+
+export PATH=/usr/local/cuda-6.5/bin:/home/simon/.autojump/bin:/home/simon/local/bin/eclipse:/home/simon/android-sdks/platform-tools:/home/simon/android-sdks/tools:/home/simon/local/bin:/opt/TurboVNC/bin:/home/simon/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/simon/neo/:/home/simon/.dotfiles/git/commands:/var/lib/gems/1.8/bin
+
+export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64
+
 # The next line updates PATH for the Google Cloud SDK.
 source '/home/simon/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/home/simon/google-cloud-sdk/completion.bash.inc'
+>>>>>>> 817104c81bb1ddbe94d46585593b3770a60dcbca
