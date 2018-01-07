@@ -180,3 +180,4 @@ setlocal display+=lastline
 
 " Pep 8 check on py file save
 autocmd BufWritePost *.py call Flake8()
+set splitright
