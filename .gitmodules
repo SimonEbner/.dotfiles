@@ -57,3 +57,6 @@
 [submodule "vim.symlink/bundle/typescript"]
 	path = vim.symlink/bundle/typescript
 	url = https://github.com/leafgarland/typescript-vim
+[submodule "vim.symlink/bundle/file-line"]
+	path = vim.symlink/bundle/file-line
+	url = https://github.com/bogado/file-line
