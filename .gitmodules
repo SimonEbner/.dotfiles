@@ -60,3 +60,6 @@
 [submodule "vim.symlink/bundle/file-line"]
 	path = vim.symlink/bundle/file-line
 	url = https://github.com/bogado/file-line
+[submodule "vim.symlink/bundle/tagbar"]
+	path = vim.symlink/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar/
