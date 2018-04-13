@@ -1,3 +1,7 @@
+" Run git clone https://github.com/VundleVim/Vundle.vim.git
+" ~/.vim/bundle/Vundle.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
 :syntax on
 :set fileformat=unix
 :call pathogen#infect()
@@ -185,3 +189,18 @@ set splitright
 " Tagbar
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
 set tags=tags;
+
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'bogado/file-line'
+Plugin 'majutsushi/tagbar'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'bkad/CamelCaseMotion.git'
+Plugin 'danro/rename.vim'
+call vundle#end()            " required
+filetype plugin indent on    " required
+

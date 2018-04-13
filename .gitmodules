@@ -1,13 +1,6 @@
-[submodule "bundle/YouCompleteMe"]
-	path = vim.symlink/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
-    ignore=dirty
 [submodule "oh-my-zsh.symlink"]
 	path = oh-my-zsh.symlink
 	url = https://github.com/robbyrussell/oh-my-zsh
 [submodule "zsh.symlink/git-prompt"]
 	path = zsh.symlink/git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt
-[submodule "vim.symlink/bundle/syntastic"]
-	path = vim.symlink/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
