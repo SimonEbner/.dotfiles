@@ -191,8 +191,14 @@ nnoremap <silent> <Leader>b :TagbarToggle<CR>
 set tags=tags;
 
 " Clang-Format
-map <C-L> :py3f /usr/local/share/clang/clang-format.py<cr>
-imap <C-L> <c-o>:py3f /usr/local/share/clang/clang-format.py<cr>
+map <C-L> :py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
+imap <C-L> <c-o>:py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
+function! Formatonsave()
+  let l:formatdiff = 1
+  py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+
 
 
 " Vundle
@@ -208,6 +214,7 @@ Plugin 'bkad/CamelCaseMotion.git'
 Plugin 'danro/rename.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'nvie/vim-flake8'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
