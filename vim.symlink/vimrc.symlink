@@ -190,6 +190,11 @@ set splitright
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
 set tags=tags;
 
+" Clang-Format
+map <C-L> :py3f /usr/local/share/clang/clang-format.py<cr>
+imap <C-L> <c-o>:py3f /usr/local/share/clang/clang-format.py<cr>
+
+
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -201,6 +206,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'bkad/CamelCaseMotion.git'
 Plugin 'danro/rename.vim'
+Plugin 'Yggdroot/indentLine'
+Plugin 'scrooloose/nerdcommenter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
