@@ -218,6 +218,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'nvie/vim-flake8'
 Plugin 'benmills/vimux'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -228,6 +229,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
+" Use font Meslo LG L DZ for Powerline
 " unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
