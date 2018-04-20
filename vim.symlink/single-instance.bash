@@ -6,9 +6,7 @@ if [ "$SUPPORTS" = '0' ];then
     alias vim="single-vim"
 fi
 
-if [ -z "$VIM_ID" ]; then
-    export VIM_ID="VIM$RANDOM"
-fi
+export VIM_ID="VIM$RANDOM"
 
 function single-vim(){
     filename=$1

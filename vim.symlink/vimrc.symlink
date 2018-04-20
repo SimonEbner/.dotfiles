@@ -41,10 +41,6 @@ filetype off                  " required
 :set fileencoding=utf-8
 :set autochdir
 
-let vimrcPath = fnamemodify( resolve( $MYVIMRC ), ':h' )
-execute "source " . vimrcPath . "/build.vim"
-:redraw
-
 :set modeline
 :set ls=2
 if exists('+colorcolumn')
@@ -53,10 +49,6 @@ else
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
     match OverLength /\%81v.\+/
 endif
-
-
-au BufNewFile,BufReadPost *.coffee setl sw=2 sts=2 et
-au BufNewFile,BufReadPost *.eco setl sw=2 sts=2 et
 
 "
 " Camel Case Movment
@@ -200,6 +192,9 @@ endfunction
 autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 
 
+" Build
+nnoremap <C-n> :call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j11")<CR>
+inoremap <C-n> <C-O>:call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j12")<CR>
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -215,6 +210,7 @@ Plugin 'danro/rename.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'nvie/vim-flake8'
+Plugin 'benmills/vimux'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
