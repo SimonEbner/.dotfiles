@@ -193,8 +193,14 @@ autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 
 
 " Build
-nnoremap <C-n> :call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j11")<CR>
-inoremap <C-n> <C-O>:call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j12")<CR>
+" Set the variable @c like so: 
+" let @c="./tests --gtest_filter='*sqlite*'
+function MyVimuxCmd()
+    execute ':call VimuxRunCommand("' . @c . '")'
+endfunction
+nnoremap <C-n><C-n> :call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j11")<CR>
+inoremap <C-n><C-n> <C-O>:call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j12")<CR>
+nnoremap <C-n><C-m> :call MyVimuxCmd()<CR>
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
