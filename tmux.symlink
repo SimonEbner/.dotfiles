@@ -12,6 +12,7 @@ bind -r C-l select-pane -U
 bind -r C-h select-pane -D 
 bind -r C-k select-pane -L 
 bind -r C-j select-pane -R 
+bind -r C-b select-pane -R 
 
 # and now unbind keys
 unbind Up     
