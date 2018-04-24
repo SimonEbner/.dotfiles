@@ -1,59 +1,6 @@
-[submodule "bundle/fugitive"]
-	path = vim.symlink/bundle/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/javascript"]
-	path = vim.symlink/bundle/javascript
-	url = git://github.com/pangloss/vim-javascript.git
-[submodule "bundle/ctrlp"]
-	path = vim.symlink/bundle/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/rename"]
-	path = vim.symlink/bundle/rename
-	url = git://github.com/danro/rename.vim.git
-[submodule "bundle/nerdcommenter"]
-	path = vim.symlink/bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/vim-coffee-script"]
-	path = vim.symlink/bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script
-[submodule "bundle/camelcasemotion"]
-	path = vim.symlink/bundle/camelcasemotion
-	url = git://github.com/bkad/CamelCaseMotion.git
-[submodule "bundle/YouCompleteMe"]
-	path = vim.symlink/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
-    ignore=dirty
-[submodule "bundle/ultisnips"]
-	path = vim.symlink/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips
-[submodule "bundle/vim-snippets"]
-	path = vim.symlink/bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets
-[submodule "bundle/indentLine"]
-	path = vim.symlink/bundle/indentLine
-	url = https://github.com/Yggdroot/indentLine
-    ignore=dirty
-[submodule "bundle/vim-airline"]
-	path = vim.symlink/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
 [submodule "oh-my-zsh.symlink"]
 	path = oh-my-zsh.symlink
 	url = https://github.com/robbyrussell/oh-my-zsh
 [submodule "zsh.symlink/git-prompt"]
 	path = zsh.symlink/git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt
-[submodule "vim.symlink/bundle/nerdtree"]
-	path = vim.symlink/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
-[submodule "vim.symlink/bundle/syntax-cpp"]
-	path = vim.symlink/bundle/syntax-cpp
-	url = https://github.com/octol/vim-cpp-enhanced-highlight
-[submodule "vim.symlink/bundle/syntastic"]
-	path = vim.symlink/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
-[submodule "vim.symlink/bundle/flake8"]
-	path = vim.symlink/bundle/flake8
-	url = https://github.com/nvie/vim-flake8
-[submodule "vim.symlink/bundle/typescript"]
-	path = vim.symlink/bundle/typescript
-	url = https://github.com/leafgarland/typescript-vim

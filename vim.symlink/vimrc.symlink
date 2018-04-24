@@ -1,3 +1,7 @@
+" Run git clone https://github.com/VundleVim/Vundle.vim.git
+" ~/.vim/bundle/Vundle.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
 :syntax on
 :set fileformat=unix
 :call pathogen#infect()
@@ -37,10 +41,6 @@
 :set fileencoding=utf-8
 :set autochdir
 
-let vimrcPath = fnamemodify( resolve( $MYVIMRC ), ':h' )
-execute "source " . vimrcPath . "/build.vim"
-:redraw
-
 :set modeline
 :set ls=2
 if exists('+colorcolumn')
@@ -49,10 +49,6 @@ else
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
     match OverLength /\%81v.\+/
 endif
-
-
-au BufNewFile,BufReadPost *.coffee setl sw=2 sts=2 et
-au BufNewFile,BufReadPost *.eco setl sw=2 sts=2 et
 
 "
 " Camel Case Movment
@@ -132,7 +128,6 @@ inoremap <C-G> <C-O>:JavaImpl<CR><S-G>
 nnoremap <C-G> :JavaImpl<CR><S-G>
 inoremap <C-F12> <C-O>:ProjectProblems!<CR><S-G>
 nnoremap <C-F12> :ProjectProblems!<CR><S-G>
-map <C-n> :NERDTreeToggle<CR>
 let g:indentLine_color_term=237
 
 "inverse tab
@@ -149,6 +144,7 @@ set synmaxcol=128
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
+let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
 hi SpellBad term=reverse ctermfg=white ctermbg=darkred guifg=#ffffff guibg=#7f0000 gui=underline
@@ -180,3 +176,79 @@ setlocal display+=lastline
 
 " Pep 8 check on py file save
 autocmd BufWritePost *.py call Flake8()
+set splitright
+
+" Tagbar
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+set tags=tags;
+
+" Clang-Format
+map <C-L> :py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
+imap <C-L> <c-o>:py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
+function! Formatonsave()
+  let l:formatdiff = 1
+  py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+
+
+
+" Build
+" Set the variable @c like so: 
+" let @c="./tests --gtest_filter='*sqlite*'
+function MyVimuxCmd()
+    execute ':call VimuxRunCommand("' . @c . '")'
+endfunction
+nnoremap <C-n><C-n> :call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j11")<CR>
+inoremap <C-n><C-n> <C-O>:call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j12")<CR>
+nnoremap <C-n><C-m> :call MyVimuxCmd()<CR>
+
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'bogado/file-line'
+Plugin 'majutsushi/tagbar'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'bkad/CamelCaseMotion.git'
+Plugin 'danro/rename.vim'
+Plugin 'Yggdroot/indentLine'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'nvie/vim-flake8'
+Plugin 'benmills/vimux'
+Plugin 'tpope/vim-fugitive'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" Use font Meslo LG L DZ for Powerline
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '⮃'"
