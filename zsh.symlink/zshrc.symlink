@@ -138,3 +138,4 @@ export LC_ALL=en_US.UTF-8
 export PATH=$PATH:/usr/local/cuda/bin
 
 alias tmux="TERM=screen-256color-bce tmux"
+stty -ixon

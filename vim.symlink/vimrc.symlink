@@ -202,6 +202,8 @@ endfunction
 nnoremap <C-n><C-n> :call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j11")<CR>
 inoremap <C-n><C-n> <C-O>:call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j12")<CR>
 nnoremap <C-n><C-m> :call MyVimuxCmd()<CR>
+nnoremap <F5> :UndotreeToggle<cr>
+
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -219,6 +221,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'nvie/vim-flake8'
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mbbill/undotree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
