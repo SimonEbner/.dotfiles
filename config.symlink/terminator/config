@@ -1,4 +1,5 @@
 [global_config]
+  geometry_hinting = False
 [keybindings]
 [layouts]
   [[default]]
