@@ -183,13 +183,15 @@ nnoremap <silent> <Leader>b :TagbarToggle<CR>
 set tags=tags;
 
 " Clang-Format
-map <C-L> :py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
-imap <C-L> <c-o>:py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
-function! Formatonsave()
-  let l:formatdiff = 1
-  py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py
-endfunction
-autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+if filereadable("~/dev/llvm/tools/clang/tools/clang-format/clang-format.py")
+    map <C-L> :py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
+    imap <C-L> <c-o>:py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
+    function! Formatonsave()
+      let l:formatdiff = 1
+      py3f ~/dev/llvm/tools/clang/tools/clang-format/clang-format.py
+    endfunction
+    autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+endif
 
 
 
@@ -222,6 +224,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mbbill/undotree'
+Plugin 'vim-syntastic/syntastic'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -254,4 +257,7 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = '⮃'"
+let g:airline_symbols.linenr = '⮃'
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
