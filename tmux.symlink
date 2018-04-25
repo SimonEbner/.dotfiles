@@ -1,7 +1,6 @@
-bind-key C-Tab next-window
-bind-key C-S-Tab previous-window
 set-option -g status-position top
 set-option -g default-shell /bin/zsh
+new-session -n $HOST
 
 # vim-like pane switching
 bind -r l select-pane -U 
@@ -13,6 +12,7 @@ bind -r C-h select-pane -D
 bind -r C-k select-pane -L 
 bind -r C-j select-pane -R 
 bind -r C-b select-pane -R 
+bind -r C-S-Tab select-pane -R 
 
 # and now unbind keys
 unbind Up     

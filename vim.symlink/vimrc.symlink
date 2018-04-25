@@ -199,8 +199,8 @@ autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 function MyVimuxCmd()
     execute ':call VimuxRunCommand("' . @c . '")'
 endfunction
-nnoremap <C-n><C-n> :call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j11")<CR>
-inoremap <C-n><C-n> <C-O>:call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j12")<CR>
+nnoremap <C-n><C-n> :call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j12 tests")<CR>
+inoremap <C-n><C-n> <C-O>:call VimuxSendKeys("C-c") \| call VimuxRunCommand("make -j12 tests")<CR>
 nnoremap <C-n><C-m> :call MyVimuxCmd()<CR>
 
 " Vundle
@@ -252,3 +252,6 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = '⮃'"
+
+:set autoread 
+
