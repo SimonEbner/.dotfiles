@@ -267,6 +267,5 @@ let g:syntastic_cpp_checkers = ["clang_check"]
 let g:syntastic_clang_check_config_file = ".clang_complete"
 let g:syntastic_cpp_checkers = []
 let g:ale_linters = { 'cpp': ['clangtidy']}
-let g:ale_cpp_clangtidy_checks=['*','-fuchsia-default-arguments','-google-runtime-references','-cppcoreguidelines-pro-bounds-pointer-arithmetic','-fuchsia-overloaded-operator','-fuchsia-statically-constructed-objects','-llvm-header-guard','-android*','-llvm-namespace-comment','-fuch
-sia-multiple-inheritance']
+let g:ale_cpp_clangtidy_checks=['*','-fuchsia-default-arguments','-google-runtime-references','-cppcoreguidelines-pro-bounds-pointer-arithmetic','-fuchsia-overloaded-operator','-fuchsia-statically-constructed-objects','-llvm-header-guard','-android*','-llvm-namespace-comment','-fuchsia-multiple-inheritance']
 let g:ale_c_build_dir='build'
