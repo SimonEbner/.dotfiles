@@ -134,7 +134,8 @@ if [ -d '/home/simon/google-cloud-sdk' ]; then
     source '/home/simon/google-cloud-sdk/path.zsh.inc'
     source '/home/simon/google-cloud-sdk/completion.zsh.inc'
 fi
+export LC_ALL=en_US.UTF-8
 export PATH=$PATH:/usr/local/cuda/bin
 
 alias tmux="TERM=screen-256color-bce tmux"
-
+stty -ixon
