@@ -214,7 +214,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-Plugin 'bogado/file-line'
 Plugin 'majutsushi/tagbar'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'bkad/CamelCaseMotion.git'
@@ -226,6 +225,7 @@ Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mbbill/undotree'
 Plugin 'w0rp/ale'
+Plugin 'lervag/file-line'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -268,4 +268,4 @@ let g:syntastic_clang_check_config_file = ".clang_complete"
 let g:syntastic_cpp_checkers = []
 let g:ale_linters = { 'cpp': ['clangtidy']}
 let g:ale_cpp_clangtidy_checks=['*','-fuchsia-default-arguments','-google-runtime-references','-cppcoreguidelines-pro-bounds-pointer-arithmetic','-fuchsia-overloaded-operator','-fuchsia-statically-constructed-objects','-llvm-header-guard','-android*','-llvm-namespace-comment','-fuchsia-multiple-inheritance']
-let g:ale_c_build_dir='build'
+let g:ale_c_build_dir='build_clang'
